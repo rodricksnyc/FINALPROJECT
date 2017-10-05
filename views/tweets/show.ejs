@@ -1,0 +1,38 @@
+<% include ../shared/_head %>
+
+  <p>
+    <a href="/trumpfarts">Back to the Brain Farts of Donald Trump</a>
+  </p>
+
+  <div>
+    <h1><%= trumpfarts.name %></h1>
+
+    <div>
+      <form method="POST" action="/trumpfarts/<%= trumpfarts.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete Tweet">
+      </form>
+
+      <a href="/trumpfarts/<%= trumpfarts.id %>/edit"><button>Edit Tweet</button></a>
+    </div>
+
+    <img src="<%= trumpfarts.profile_pic_url %>" style="width: 400px;">
+
+    <p>
+      <%= trumpfarts.phone_number %><br />
+      <a href="<%= trumpfarts.website_url %>">Website</a>
+    </p>
+
+    <p>
+      <span><%= trumpfarts.address %></span><br />
+      <span><%= trumpfarts.city %>, <%= trumpfarts.state %></span>
+    </p>
+  </div>
+
+  <h2>Ratings</h3>
+
+  <% include ../reviews/new %>
+
+  <% include ../reviews/index %>
+
+<% include ../shared/_foot %>

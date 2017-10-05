@@ -1,0 +1,17 @@
+
+<ol>
+  <% reviews = trumpfarts.reviews %>
+  <% for (let i = 0; i < reviews.length; i++) { %>
+    <% let review = reviews[i]; %>
+    <li>
+      <h3><%= review.title %></h3>
+      <small>Submitted by <strong><%= review.reviewer %></strong></small>
+      <p><%= review.body %></p>
+      <strong>Stars:</strong> <%= review.num_stars %>
+      <form method="POST" action="/trumpfarts/<%= trumpfarts.id %>/reviews/<%= review.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete Review">
+      </form>
+    </li>
+  <% } %>
+</ol>

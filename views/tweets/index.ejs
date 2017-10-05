@@ -1,0 +1,39 @@
+<% include ../shared/_head %>
+
+  <ol>
+    <% for (let i = 0; i < tweets.length; i++) { %>
+      <% let tweet = tweets[i] %>
+      <% let total = 0 %>
+      <% for (var j = 0; j < tweet.score.length; j++ ) { %>
+        <% let score = tweet.score[j] %>
+        <% total += score %>
+      <% } %>
+      <% let average = total / tweet.score.length %>
+
+
+      <li>
+        <h1><%= average %></h1>
+        <p>
+          <img src="<%= tweet.profile_pic_url %>" style="width: 300px;">
+        </p>
+        <form action="/tweets/<%= tweet.id %>" method="POST">
+      <fieldset>
+        <legend>Please Rate This Tweet</legend>
+        <!-- <label for="full-name">Full Name</label> -->
+        <!-- <input type="text" id="full-name" placeholder="Your name here"> -->
+        <label for="radio-container">How do you rate this Trump tweet?</label>
+        <div class="radio-container">
+          <input name="score" type="range" min="1" max="10" value="1"/>
+        </div>
+
+
+        <!-- <label for="password">Password</label>
+        <input type="text" id="password" placeholder="Text Input"> -->
+        <input type="submit" value="Rate!">
+      </fieldset>
+    </form>
+      </li>
+    <% } %>
+  </ol>
+
+<% include ../shared/_foot %>

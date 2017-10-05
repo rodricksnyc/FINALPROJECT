@@ -1,0 +1,19 @@
+<% let action = tweets.id ? `/tweets/${tweets.id}` : '/tweets'; %>
+<% let submit = tweets.id ? 'Update tweets' : 'Create tweets'; %>
+
+<form method="POST" action="<%= action %>">
+  <% if (tweets.id) { %>
+    <input type="hidden" name="_method" value="PUT">
+  <% } %>
+
+  <input type="text" name="name" placeholder="Tweet Name" value="<%= tweets.name %>">
+  <input type="text" name="phone_number" placeholder="Phone" value="<%= tweets.phone_number %>">
+  <input type="text" name="website_url" placeholder="Website" value="<%= tweets.website_url %>">
+  <input type="text" name="profile_pic_url" placeholder="Profile Pic" value="<%= tweets.profile_pic_url %>">
+  <input type="text" name="address" placeholder="Address" value="<%= tweets.address %>">
+  <input type="text" name="city" placeholder="City" value="<%= tweets.city %>">
+  <input type="text" name="state" placeholder="State" value="<%= tweets.state %>">
+
+  <input type="submit" value="<%= submit %>">
+
+</form>
