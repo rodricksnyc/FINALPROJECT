@@ -1,5 +1,6 @@
 body {
   background-color:  #ff3300;
+
 }
 p {
   font-family: impact;
@@ -8,7 +9,18 @@ p {
 a {
   color: #00B7FF;
 }
+ol {
+  font-style: impact;
+  font-size: 24px;
+  font-weight: bolder;
+}
+li {
+  font-style: impact;
 
+}
+.dot  {
+  font-family: impact;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -21,7 +33,7 @@ a {
   align-items:center;
 }
 .top {
-  margin-left: 60px;
+  margin-left: 50px;
   display: flex;
   justify-content: space-between;
   align-items:center;
@@ -32,9 +44,9 @@ a {
   width: 70%;
 }
 h1 {
-  font-size: 24px;
-  font-family: impact;
-  font-weight: 100;
+  font-size: 18px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 900;
 }
 h3 {
   font-size: 100px;
@@ -49,6 +61,12 @@ h5 {
 h2 {
   font-family: 'Source Code Pro', monospace;
   font-size: 24px;
+}
+
+h6 {
+  font-family: impact;
+  font-size: 22px;
+
 }
 .picture {
   background-image: url("../img/donald.png");
@@ -76,7 +94,7 @@ input {
 }
 .radio-container {
   font-family: 'Source Code Pro', monospace;
-  font-size: 28px;
+  font-size: 35px;
 }
 legend {
   font-family: 'Source Code Pro', monospace;
@@ -84,5 +102,5 @@ legend {
 }
 label {
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-size: 35px;
 }

@@ -23,24 +23,24 @@
       <% let average = total / tweet.score.length %>
 
       <li>
-        <h1>Average Score: <%= average %></h1>
+        <h6>Average Score: <%= average %></h6>
         <p>
       <img src="<%= tweet.profile_pic_url %>" style="width: 600px;">
         </p>
       </div>
         <form action="/tweets/<%= tweet.id %>" method="POST">
       <fieldset>
-        <legend>Please Rate This Tweet</legend>
+        <!-- <legend>Please Rate This Tweet</legend> -->
 
         <label for="radio-container">How do you rate this Trump tweet?</label>
         <div class="radio-container">
           <input name="score" type="range" min="1" max="10" value="1"/>
           <div class="top">
-          <h1>Gross</h1>
-          <h1>Repulsive</h1>
-          <h1>Slightly Nauseating</h1>
-          <h1>Very Nauseating</h1>
-          <h1>Throwing Up</h1>
+          <h6>Gross</h6>
+          <h6>Repulsive</h6>
+          <h6>Slightly Nauseating</h6>
+          <h6>Very Nauseating</h6>
+          <h6>Throwing Up</h6>
           </div>
         <input type="submit" value="Rate!" id="submit-btn"></input>
       </fieldset>
