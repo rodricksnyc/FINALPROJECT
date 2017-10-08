@@ -13,6 +13,7 @@ ol {
   font-style: impact;
   font-size: 24px;
   font-weight: bolder;
+  margin-left: 0px;
 }
 li {
   font-style: impact;
@@ -40,9 +41,7 @@ li {
   text-decoration: none;
 
 }
-.radio-container {
-  width: 70%;
-}
+
 h1 {
   font-size: 18px;
   font-family: 'Source Code Pro', monospace;
@@ -60,12 +59,12 @@ h5 {
 }
 h2 {
   font-family: 'Source Code Pro', monospace;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 h6 {
   font-family: impact;
-  font-size: 22px;
+  font-size: 26px;
 
 }
 .picture {
@@ -95,6 +94,8 @@ input {
 .radio-container {
   font-family: 'Source Code Pro', monospace;
   font-size: 35px;
+  width: 95%;
+
 }
 legend {
   font-family: 'Source Code Pro', monospace;

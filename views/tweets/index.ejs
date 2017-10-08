@@ -25,7 +25,7 @@
       <li>
         <h6>Average Score: <%= average %></h6>
         <p>
-      <img src="<%= tweet.profile_pic_url %>" style="width: 600px;">
+      <img src="<%= tweet.profile_pic_url %>" style="width: 700px;">
         </p>
       </div>
         <form action="/tweets/<%= tweet.id %>" method="POST">
@@ -36,11 +36,11 @@
         <div class="radio-container">
           <input name="score" type="range" min="1" max="10" value="1"/>
           <div class="top">
-          <h6>Gross</h6>
-          <h6>Repulsive</h6>
-          <h6>Slightly Nauseating</h6>
-          <h6>Very Nauseating</h6>
-          <h6>Throwing Up</h6>
+          <h2>Gross</h2>
+          <h2>Repulsive</h2>
+          <h2>Nauseating</h2>
+          <h2>Heinous</h2>
+          <h2>I Threw Up</h2>
           </div>
         <input type="submit" value="Rate!" id="submit-btn"></input>
       </fieldset>
