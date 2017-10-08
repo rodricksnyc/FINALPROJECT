@@ -1,8 +1,55 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:  #ff3300;
 }
-
+p {
+  font-family: impact;
+}
 a {
   color: #00B7FF;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.thescore {
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+}
+.top {
+  margin-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  text-decoration: none;
+
+}
+.radio-container {
+  width: 70%;
+}
+h1 {
+  font-size: 16px;
+  font-family: impact;
+}
+h3 {
+  font-size: 100px;
+  font-family: impact;
+  margin-left: 20px;
+}
+h5 {
+  font-size: 50px;
+  font-family: impact;
+  margin-right: 20px;
+}
+.picture {
+  background-image: url("../img/donald.png");
+  background-size: cover;
+  background-position: no-repeat center center;
+  width:1300px;
+  height: 984px;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  margin-top: 10px;
 }

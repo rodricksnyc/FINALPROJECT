@@ -1,3 +1,4 @@
+var cool = require('cool-ascii-faces');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -45,6 +46,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/tweets', tweetRoutes);
+
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

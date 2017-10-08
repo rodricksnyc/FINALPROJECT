@@ -1,4 +1,16 @@
+
+
 <% include ../shared/_head %>
+<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+<body>
+<div class="header">
+  <h3>Trump Farts</h3>
+  <h5>The Brain Farts of Donald Trump</h5>
+</div>
+<div class="picture">
+</div>
+
+
 
   <ol>
     <% for (let i = 0; i < tweets.length; i++) { %>
@@ -10,30 +22,37 @@
       <% } %>
       <% let average = total / tweet.score.length %>
 
-
       <li>
-        <h1><%= average %></h1>
+        <h1>Average Score: <%= average %></h1>
         <p>
-          <img src="<%= tweet.profile_pic_url %>" style="width: 300px;">
+      <img src="<%= tweet.profile_pic_url %>" style="width: 600px;">
         </p>
+      </div>
         <form action="/tweets/<%= tweet.id %>" method="POST">
       <fieldset>
         <legend>Please Rate This Tweet</legend>
-        <!-- <label for="full-name">Full Name</label> -->
-        <!-- <input type="text" id="full-name" placeholder="Your name here"> -->
+
         <label for="radio-container">How do you rate this Trump tweet?</label>
         <div class="radio-container">
           <input name="score" type="range" min="1" max="10" value="1"/>
-        </div>
-
-
-        <!-- <label for="password">Password</label>
-        <input type="text" id="password" placeholder="Text Input"> -->
-        <input type="submit" value="Rate!">
+          <div class="top">
+          <h1>Gross</h1>
+          <h1>Repulsive</h1>
+          <h1>Slightly Nauseating</h1>
+          <h1>Very Nauseating</h1>
+          <h1>Throwing Up</h1>
+          </div>
+        <input type="submit" value="Rate!" id="submit-btn"></input>
       </fieldset>
     </form>
       </li>
+  </div>
     <% } %>
   </ol>
+  <script src="javascripts/index.js"></script>
+</body>
+
+
+
 
 <% include ../shared/_foot %>
