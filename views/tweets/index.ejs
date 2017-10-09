@@ -2,6 +2,8 @@
 
 <% include ../shared/_head %>
 <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+
+
 <body>
 <div class="header">
   <h3>Trump Farts</h3>
@@ -23,7 +25,10 @@
       <% let average = total / tweet.score.length %>
 
       <li>
-        <h6>Average Score: <%= average %></h6>
+        <div class="star">
+        <img class="yellow" src="img/star.png">
+        <%= average %>
+      </div>
         <p>
       <img src="<%= tweet.profile_pic_url %>" style="width: 700px;">
         </p>
@@ -49,6 +54,10 @@
   </div>
     <% } %>
   </ol>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
   <script src="javascripts/index.js"></script>
 </body>
 

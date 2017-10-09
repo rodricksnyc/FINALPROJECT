@@ -1,8 +1,8 @@
-function () {
+$(document).ready(function ()
 
-$('#submit-btn').submit(function(event) {
-
-    event.preventDefault();
-
-});
+function start() {
+  $("#submit-btn").submit(function(event) {
+      event.preventDefault();
+  });
+}
 }
