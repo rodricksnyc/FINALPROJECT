@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
 
     res.render('tweets/index', {
       tweets: tweets || [],
-      title: 'Tweet List',
+      title: 'Trump Farts',
       deleteTweet: "deleteTweet()"
     });
   });
