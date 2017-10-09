@@ -12,11 +12,9 @@ router.get('/', function(req, res) {
       console.log(id)
     }
 
-
     res.render('tweets/index', {
       tweets: tweets || [],
-      title: 'Trump Farts',
-      deleteTweet: "deleteTweet()"
+      title: 'Trump Farts'
     });
   });
 });
