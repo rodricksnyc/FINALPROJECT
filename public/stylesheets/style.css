@@ -59,7 +59,7 @@ h1 {
   font-weight: 900;
 }
 h3 {
-  font-size: 120px;
+  font-size: 110px;
   font-family: impact;
   color: white;
   margin-bottom: 0px;
@@ -73,8 +73,8 @@ h5 {
 }
 h2 {
   font-family: 'Source Code Pro', monospace;
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 28px;
+  font-weight: 900;
 }
 
 h6 {
@@ -120,3 +120,9 @@ label {
   font-family: 'Source Code Pro', monospace;
   font-size: 35px;
 }
+ .footer {
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   margin-left: 100px;
+ }
