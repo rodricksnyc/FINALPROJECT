@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Tweets = require('../models/tweets');
+var Tweet = require('../models/tweet');
 
 // 'Index' route for listing all the restaurants
 router.get('/', function(req, res) {
-  Tweets.find({}, null, {sort: {profile_pic_url: 'asc'}}, function(err, tweets) {
+  Tweet.find({}, null, {sort: {profile_pic_url: 'asc'}}, function(err, tweets) {
 
 
     const deleteTweet = (id) => {
@@ -24,11 +24,13 @@ router.post('/:id', function(req, res) {
   let id = req.params.id;
   let score = req.body.score
 
-  Tweets.update(
+  Tweet.findOneAndUpdate(
     { _id: id},
     { $push: {score: score} },
-    function(err, tweets) {
-      res.redirect(`/tweets`);
+    { new: true },
+    function(err, tweet) {
+      var obj = Object.assign(tweet.toObject(), { avgScore: tweet.avgScore() })
+      res.json(obj);
     }
   );
 });

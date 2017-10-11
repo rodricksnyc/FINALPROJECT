@@ -22,42 +22,34 @@
   <ol>
     <% for (let i = 0; i < tweets.length; i++) { %>
       <% let tweet = tweets[i] %>
-      <% let total = 0 %>
-      <% for (var j = 0; j < tweet.score.length; j++ ) { %>
-        <% let score = tweet.score[j] %>
-        <% total += score %>
-      <% } %>
-      <% let average = total / tweet.score.length %>
-
       <li>
         <div class="star">
-        <img class="yellow" src="img/star.png">
-        <%= average %>
-      </div>
+          <img class="yellow" src="img/star.png">
+          <span class="js-avg-score"><%= tweet.avgScore() %></span>
+        </div>
         <p>
-      <img src="<%= tweet.profile_pic_url %>" style="width: 700px;">
+          <img src="<%= tweet.profile_pic_url %>" style="width: 700px;">
         </p>
-      </div>
-        <form action="/tweets/<%= tweet.id %>" method="POST">
-      <fieldset>
-        <!-- <legend>Please Rate This Tweet</legend> -->
+        <form class="js-tweet-form" data-tweetid="<%= tweet.id %>">
+          <fieldset>
+            <!-- <legend>Please Rate This Tweet</legend> -->
 
-        <label for="radio-container">How do you rate this Trump tweet?</label>
-        <div class="radio-container">
-          <input name="score" type="range" min="1" max="10" value="1"/>
-          <div class="top">
-          <h2>Gross</h2>
-          <h2>Heinous</h2>
-          <h2>Nauseating</h2>
-          <h2>Migraine</h2>
-          <h2>I Threw Up</h2>
-          </div>
-        <input type="submit" value="Rate!" onclick="play()" id="submit-btn">
-        <audio id="audio" src="audio/fired.mp3"></audio></input>
-      </fieldset>
-    </form>
+            <label for="radio-container">How do you rate this Trump tweet?</label>
+            <div class="radio-container">
+              <input class="js-score" name="score" type="range" min="1" max="10" value="1"/>
+              <div class="top">
+                <h2>Gross</h2>
+                <h2>Heinous</h2>
+                <h2>Nauseating</h2>
+                <h2>Migraine</h2>
+                <h2>I Threw Up</h2>
+              </div>
+            </div>
+            <input type="submit" value="Rate!" onclick="play()" id="submit-btn">
+            <audio id="audio" src="audio/fired.mp3"></audio></input>
+          </fieldset>
+        </form>
       </li>
-  </div>
     <% } %>
   </ol>
 
