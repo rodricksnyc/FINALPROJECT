@@ -1,6 +1,5 @@
 body {
   background-color:  #ff3300;
-
 }
 p {
   font-family: impact;
@@ -15,12 +14,18 @@ ol {
   font-weight: bolder;
   margin-left: 0px;
 }
+@media screen (min-width: 320px) and (max-width: 767px){
+    ol {
+        display: block;
+  }
+}
 li {
   font-style: impact;
 }
 .dot  {
   font-family: impact;
 }
+
 .header {
   display: flex;
   flex-direction: column;
